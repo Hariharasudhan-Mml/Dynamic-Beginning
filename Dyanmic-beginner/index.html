@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">`
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated webpages</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="path"></div>
+    <div class="container">
+        <nav>
+            <ul class="nav_container">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Bikes</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <ul class="bike_container">
+            <li><img width="150px"
+                    src="https://images.carandbike.com/bike-images/medium/ktm/rc-200/ktm-rc-200.webp?v=14"
+                    onclick="changeback('black','tomato');changebike('https://images.carandbike.com/bike-images/medium/ktm/rc-200/ktm-rc-200.webp?v=14')" />
+            </li>
+            <li><img width="150px" src="https://image3.mouthshut.com/images/imagesp/925090579s.png"
+                    onclick="changeback('red','white');changebike('https://image3.mouthshut.com/images/imagesp/925090579s.png')">
+            </li>
+            <li><img width="150px" src="https://www.heromotocorp.com/en-in/xtreme160r/images/features-bike.png"
+                    onclick="changeback('grey','whitesmoke');changebike('https://www.heromotocorp.com/en-in/xtreme160r/images/features-bike.png')" />
+            </li>
+        </ul>
+        <img class="bikes" src="https://images.carandbike.com/bike-images/medium/ktm/rc-200/ktm-rc-200.webp?v=14"
+            width="600px" />
+        <!--<img class="bikes" src="https://img.indianautosblog.com/2020/04/07/bs6-hero-xpulse-200-right-side-500b.png" width="600px"/>
+<img class="bikes" src="https://image3.mouthshut.com/images/imagesp/925090579s.png" width="600px"/>-->
+        <div class="quote">
+            <h1>For Travellers</h1>
+            <p>stay connected with us and go around the world with experienced Ones.</p>
+            <h2>Fear Not Living</h2>
+        </div>
+
+    </div>
+
+    <script>
+        function changebike(color) {
+            let bike = document.querySelector('.bikes');
+            bike.setAttribute("src", color);
+
+        };
+        function changeback(black, orange) {
+            let first = document.querySelector('.path');
+            first.style.background = black;
+            let second = document.querySelector('.container');
+            second.style.background = orange;
+        }
+
+    </script>
+</body>
+
+</html>
